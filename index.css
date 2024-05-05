@@ -1,0 +1,75 @@
+.headerList > ul{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+.headerList >ul> li {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.body-div {
+    margin: 10px;
+}
+
+.upper-div{
+    display: flex;
+}
+
+.filter-btn {
+    margin-left: 10px;
+}
+
+.clear-btn {
+    margin-left: 10px;
+}
+
+.search > .search-btn {
+    margin-left: 5px;
+}
+
+.card {
+    border: 1px solid black;
+    width: 170px;
+    margin: 5px;
+    background-color: rgb(244, 241, 241);
+}
+
+.crad-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-list > ul{
+    list-style: none;
+    margin: 2px;
+}
+
+.card-list >ul >li {
+    margin: 5px;
+} 
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img > img{
+    width: 170px;
+    height: 150px
+}
+
+.image > img{
+    height: 100px;
+}
+
+.login {
+    padding: 0px 5px;
+    margin-right: 5px;
+}
