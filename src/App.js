@@ -2,16 +2,18 @@ import React from "react"
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Body from "./Body";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import ErrorElement from "./ErrorElement";
+import ContactUs from "./ContactUs";
+import RestaurantMenu from "./RestaurantMenu";
 
 
-const Test = () =>{
+const AppLayout = () =>{
     return(
         <div className="newClass">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     )
 }
@@ -19,10 +21,19 @@ const Test = () =>{
 const appRouter = createBrowserRouter(
     [
         {path:"/",
-        element: <Test/>,
-        errorElement:<ErrorElement/>,},
-        {path:"/AboutUs",
-        element:< AboutUs/>}
+        element: <AppLayout/>,
+        children:[
+            {path:"/AboutUs",
+        element:< AboutUs/>},
+        {path:"/ContactUs",
+        element:< ContactUs/>},
+        {path:"/",
+        element:< Body/>},
+        {path:"/restaurants/:resId",
+        element:<RestaurantMenu />}
+        ],
+        errorElement:<ErrorElement/>,
+    },
     ]
 )
 
