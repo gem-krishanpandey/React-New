@@ -1,6 +1,7 @@
 import Card from "./Card";
 import resList from "../utils/Constants";
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Body = () => {
 
@@ -47,7 +48,7 @@ const fetchData = (async()=> {
             </div>
             </div>
             <div className="card-container">
-                {newFilteredList.map((restraunt) => ( <Card key={restraunt.info.id} resData = {restraunt} />))}
+                {newFilteredList.map((restraunt) => (<Link key={restraunt.info.id} to={"/restaurants/"+restraunt.info.id}><Card resData = {restraunt} /> </Link>))}
             </div>
         </div>
     )
